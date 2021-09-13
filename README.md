@@ -6,7 +6,7 @@
 Scheme:
 ![alt text](https://github.com/drmdvorskiy/less5/raw/main/scheme.png "Logo Title Text 1")
 
-###Схема стенда:
+Схема стенда:
 
 на фронтах поднят плавающий ип(192.168.4.4), запросы на него по 80 проксируются на бэки
 (upstream), после бэки цепляются к базе
