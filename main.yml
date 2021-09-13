@@ -1,0 +1,49 @@
+---
+- name: install keepalive
+  become: true
+  hosts: fe
+  roles:
+    - role: install-keepalive
+
+- name: install nginx
+  become: true
+  hosts: nginx
+  roles:
+    - role: install-nginx
+
+- name: install php
+  become: true
+  hosts: web
+  roles:
+    - role: install-php
+
+
+- name: install mysql
+  become: true
+  hosts: db
+  roles:
+    - role: install-mysql
+
+- name: configure keepalive
+  become: true
+  hosts: fe
+  roles:
+    - role: configure-keepalived
+
+- name: configure-nginx-fronts
+  become: true
+  hosts: fe
+  roles:
+    - role: configure-nginx-fronts
+
+- name: configure-nginx-backends
+  become: true
+  hosts: web
+  roles:
+    - role: configure-nginx-backends
+
+- name: configure-mysql
+  become: true
+  hosts: db
+  roles:
+    - role: configure-mysql
